@@ -11,22 +11,20 @@ public class HelpCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
+
+        String message = "This is a list of all commands and their usage:" + "\n ```" +
+                "!help = Get to see this!" +
+                "\n!d (sides) = Roll a (sides) sided die." +
+                "\n!d (sides), (dice) = Roll (dice) amount of (sides) sided dice." +
+                "\n!ping = Pong!" +
+                "```";
+
         if(event.isPrivate()) {
-            event.getAuthor().getPrivateChannel().sendMessage("This is a list of all commands and their usage:" + "\n ```" +
-                    "!help = Get to see this!" +
-                    "\n!d (sides) = Roll a (sides) sided die." +
-                    "\n!d (sides), (dice) = Roll (dice) amount of (sides) sided dice." +
-                    "\n!ping = Pong!" +
-                    "```");
+            event.getAuthor().getPrivateChannel().sendMessage(message);
         } else {
             event.getChannel().sendMessage(event.getAuthor().getAsMention() + " Sending !help to you in a PM!");
 
-            event.getAuthor().getPrivateChannel().sendMessage("This is a list of all commands and their usage:" + "\n ```" +
-            "!help = Get to see this!" +
-            "\n!d (sides) = Roll a (sides) sided die." +
-            "\n!d (sides), (dice) = Roll (dice) amount of (sides) sided dice." +
-            "\n!ping = Pong!" +
-            "```");
+            event.getAuthor().getPrivateChannel().sendMessage(message);
         }
     }
 

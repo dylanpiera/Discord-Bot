@@ -1,9 +1,6 @@
 package io.soaringdylan.discordbot;
 
-import io.soaringdylan.discordbot.commands.DiceCommand;
-import io.soaringdylan.discordbot.commands.HelpCommand;
-import io.soaringdylan.discordbot.commands.InviteCommand;
-import io.soaringdylan.discordbot.commands.PingCommand;
+import io.soaringdylan.discordbot.commands.*;
 import io.soaringdylan.discordbot.util.CommandParser;
 import io.soaringdylan.discordbot.util.Sneaky;
 import net.dv8tion.jda.JDA;
@@ -30,6 +27,7 @@ public class Main {
         commands.put("invite", new InviteCommand());
         commands.put("d", new DiceCommand());
         commands.put("help", new HelpCommand());
+        commands.put("cc", new ConnectingCavernCommand());
     }
 
     public static void handleCommand(CommandParser.CommandContainer cmd) {
