@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Sneaky utils that shoudn't be uploaded to github.
+Sneaky.java
+Sneaky.class
