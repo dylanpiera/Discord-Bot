@@ -12,11 +12,13 @@ public class HelpCommand implements Command {
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
 
-        String message = "This is a list of all commands and their usage:" + "\n ```" +
-                "!help = Get to see this!" +
+        String message = "Our sourcecode can be found over on discord: https://github.com/dylanpiera/Soaring-Bot-JDA\n\nThis is a list of all commands and their usage:" + "\n ```" +
+                "!help = Get to see this! [PM Only]" +
                 "\n!d (sides) = Roll a (sides) sided die." +
                 "\n!d (sides), (dice) = Roll (dice) amount of (sides) sided dice." +
                 "\n!ping = Pong!" +
+                "\n!cc = Information over the Connecting Caverns [PM Only]" +
+                "\n!invite = Get a link to invite the bot to your server" +
                 "```";
 
         if(event.isPrivate()) {
