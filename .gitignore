@@ -49,3 +49,8 @@ Temporary Items
 # Sneaky utils that shoudn't be uploaded to github.
 Sneaky.java
 Sneaky.class
+
+# Random shit I don't want out there.
+.META-INF
+MANIFEST.MF
+Discord-Bot.jar

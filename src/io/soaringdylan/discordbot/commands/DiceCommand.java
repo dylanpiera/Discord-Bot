@@ -41,6 +41,7 @@ public class DiceCommand implements Command {
                 }
                 for (int x = 0; x < Integer.parseInt(args[1]); x++) {
                     if (x != 0) result = result + ", ";
+                    if (x >= 100) break;
 
                     result = result + (rand.nextInt(Integer.parseInt(args[0])) + 1);
                 }
